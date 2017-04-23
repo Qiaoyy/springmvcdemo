@@ -62,15 +62,15 @@
 
 
                 <li class="active-link">
-                    <a href="index.html" ><i class="fa fa-desktop "></i>Dashboard <span class="badge">Included</span></a>
+                    <a href="index.html" ><i class="fa fa-desktop "></i>首页</a>
                 </li>
 
 
                 <li>
-                    <a href="ui.html"><i class="fa fa-table "></i>UI Elements  <span class="badge">Included</span></a>
+                    <a href="/house/houses"><i class="fa fa-table "></i>房源管理<span class="badge">Included</span></a>
                 </li>
                 <li>
-                    <a href="blank.html"><i class="fa fa-edit "></i>Blank Page  <span class="badge">Included</span></a>
+                    <a href="/customer/customers"><i class="fa fa-edit "></i>客户管理  <span class="badge">Included</span></a>
                 </li>
 
 

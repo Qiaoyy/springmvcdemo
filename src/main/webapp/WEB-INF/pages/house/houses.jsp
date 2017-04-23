@@ -85,24 +85,24 @@
             <div >
 
                 <%--<div class="container">--%>
-                <h1>房屋管理</h1>
+                <h1>房屋管理 <a href="/house/houses/add" type="button" class="btn btn-primary btn-sm">录入房源</a></h1>
                 <hr/>
 
-                <h3>所有房屋 <a href="/house/houses/add" type="button" class="btn btn-primary btn-sm">录入房源</a></h3>
+                <h3>所有房屋 </h3>
 
 
                 <!-- 如果用户列表非空 -->
                 <c:if test="${!empty houseList}">
                     <c:forEach items="${houseList}" var="house">
-                <table class="table ">
-                    <tr>
+                <table width="100%" >
+                    <tr >
 
-                        <td rowspan="3"><img src="/upload/right_hand.png"></td>
-                        <td>客户:${house.customerByCustomerId.customerName}</td>
-                        <td>
-                           状态:${house.}
+                        <td width="20%" rowspan="3"><img width="100%"  src="/upload/noneImg.png"></td>
+                        <td width="30%">客户:${house.customerByCustomerId.customerName}</td>
+                        <td width="30%">
+                           状态:${house.houseStateByHouseStateId.houseStateName}
                         </td>
-                        <td>
+                        <td width="30%">
                             <a href="/house/houses/show/${house.houseId}" type="button"
                                class="btn btn-sm btn-success">详情</a>
                         </td>
@@ -110,9 +110,9 @@
                     </tr>
                     <tr>
                         <td>
-                            建筑面积:80平米
+                            建筑面积:${house.houseArea}
                         </td>
-                        <td>户型:三室两厅</td>
+                        <td>户型:${house.bedroomNum}室${house.livingroomNum}厅</td>
                         <td>
                             <a href="/house/houses/update/${house.houseId}" type="button"
                                class="btn btn-sm btn-warning">修改</a>
@@ -120,11 +120,12 @@
 
                     </tr>
                     <tr>
-                        <td>小区:小区一号</td>
-                        <td>楼层:10</td>
+                        <td>小区:${house.blockByBlockId.blockName}</td>
+                        <td>楼层:${house.houseFloorId}</td>
                         <td><a href="/house/houses/delete/${house.houseId}" type="button"
                                class="btn btn-sm btn-danger">删除</a></td>
                     </tr>
+                    <hr>
 
 
 
